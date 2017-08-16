@@ -162,6 +162,7 @@ function getPlugins(platform, env) {
             { from: "fonts/**" },
             { from: "**/*.jpg" },
             { from: "**/*.png" },
+            { from:"**/*.gif"},
             { from: "**/*.xml" },
         ], { ignore: ["App_Resources/**"] }),
 

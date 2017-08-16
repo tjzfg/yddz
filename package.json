@@ -4,7 +4,7 @@
   "readme": "NativeScript Application",
   "repository": "<fill-your-repository-here>",
   "nativescript": {
-    "id": "org.nativescript.yddz",
+    "id": "com.defangit.yddz",
     "tns-android": {
       "version": "3.1.1"
     }
@@ -18,12 +18,15 @@
     "@angular/http": "~4.2.0",
     "@angular/platform-browser": "~4.2.0",
     "@angular/router": "~4.2.0",
+    "df-tns-ng-instruments": "git+https://git@code.aliyun.com/defangCoLtd/df-tns-ng-instruments.git#alipay",
+    "df_ng_mall_services": "git+https://code.aliyun.com/defang_mall/df_ng_mall_services.git#public",
     "enhanced-resolve": "^3.3.0",
     "nativescript-angular": "~4.2.0",
+    "nativescript-carouselNg": "github:tjzfg/nativescript-carouselNg",
     "nativescript-theme-core": "~1.0.2",
     "reflect-metadata": "~0.1.8",
     "rxjs": "~5.4.2",
-    "tns-core-modules": "~3.1.0",
+    "tns-core-modules": "^3.1.0",
     "zone.js": "~0.8.2"
   },
   "devDependencies": {
@@ -40,7 +43,7 @@
     "nativescript-dev-webpack": "^0.7.3",
     "raw-loader": "~0.5.1",
     "resolve-url-loader": "~2.1.0",
-    "typescript": "~2.4.2",
+    "typescript": "^2.3.2",
     "webpack": "~3.2.0",
     "webpack-bundle-analyzer": "^2.8.2",
     "webpack-sources": "~1.0.1"

@@ -1,0 +1,36 @@
+/**产品详情区域**/
+product-good-name{
+    padding:2;
+}
+.productBox{
+    background-color: #fff;
+    font-size: 10;
+    padding-bottom: 5;
+    margin-top: 7;
+}
+.product-img{
+    z-index: 10;
+}
+.productBox Label.price{
+    color: #1489ff;
+    font-size: 15;
+}
+.productBox Label.stock{
+    text-align: right;
+    margin-top: 5;
+    margin-right: 3;
+}
+
+.product-textView{
+    font-size: 13;
+    margin-left: 3;
+}
+.margin-left{
+    margin-left: 5;
+}
+.rmb-text{
+    vertical-align: middle;
+    text-align: center;
+    color: #1489ff;
+}
+

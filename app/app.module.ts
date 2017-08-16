@@ -6,7 +6,12 @@ import { AppComponent } from "./app.component";
 import { ItemService } from "./item/item.service";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
-
+import {NgCarouselModule} from "nativescript-carouselNg"
+import {IndexComponent} from "./index/index.component";
+import {ServiceModule} from "df_ng_mall_services/service.module";
+import {NativeScriptHttpModule} from "nativescript-angular/http";
+import {MallCommonModule} from "./commons/mall.common.module";
+import {DFTnsCommonModule} from "df-tns-ng-instruments"
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
@@ -19,11 +24,16 @@ import { ItemDetailComponent } from "./item/item-detail.component";
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        NativeScriptHttpModule,
+        NgCarouselModule,
+        AppRoutingModule,
+        MallCommonModule,
+        ServiceModule.forRoot("http://47.93.39.3")
     ],
     declarations: [
         AppComponent,
         ItemsComponent,
+        IndexComponent,
         ItemDetailComponent
     ],
     providers: [

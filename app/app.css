@@ -10,3 +10,18 @@ of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme.
 */
 @import 'nativescript-theme-core/css/core.light.css';
+ActionBar{
+    background-color:red;
+    height:50;
+}
+.col-2-odd{
+    margin:5 2% 0 0;
+    width:49%;
+}
+.col-2-even{
+    margin-top:5;
+    width:49%;
+}
+productBox{
+    background-color:#ffff00;
+}

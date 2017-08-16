@@ -1,0 +1,51 @@
+<!--产品详情区域-->
+<WrapLayout width="96%">
+    <StackLayout *ngFor="let p of stocksList|async;let _odd=odd;" [class.col-2-odd]="!_odd" [class.col-2-even]="_odd" >
+        <AbsoluteLayout>
+            <Image [dfHolder]="'loading.gif'" url="{{'http://47.93.39.3/images/'+p.stocks[0].spec.picUrls[0]}}"
+                   width="100%" height="160" stretch="aspectFill">
+            </Image><!--stretch="aspectFill"-->
+        </AbsoluteLayout>
+        <product-good-name [product]="p"></product-good-name>
+        <product-good-priceAndStock [product]="p"></product-good-priceAndStock>
+    </StackLayout>
+
+    <!--<GridLayout class="col-2-odd" height="160">-->
+        <!---->
+    <!--</GridLayout>-->
+</WrapLayout>
+<!--
+<GridLayout rows="{{config.gridRows}}" width="95%" height="100%" horizontalAlignment="center">
+    &lt;!&ndash;row行 col 列&ndash;&gt;
+    <GridLayout #imageGrid *ngFor="let p of stocksList;trackBy:itemTrackBy;let _odd=odd;let _index=index;" (tap)="jumpProduct(p)"
+                rows="auto 20 auto auto" columns="10 * 50" col="{{_odd?'1':'0'}}" row="{{floor(_index)}}"
+                width="49%" height="100%" class="productBox" horizontalAlignment="{{_odd?'right':'left'}}">
+        &lt;!&ndash;产品图&ndash;&gt;
+        <AbsoluteLayout width="100%" height="160" colSpan="3" row="0">
+            <Image [dfHolder]="'loading.gif'" url="{{config.imageUrl+p.stocks[0].spec.picUrls[0]}}"
+                   width="100%" height="160" stretch="aspectFill"></Image>
+        </AbsoluteLayout>
+        <StackLayout class="margin-left" colSpan="3" row="1" orientation="horizontal">
+            <Image *ngIf="p.good.tags[0]==1"  src="res://second01" width="30"></Image>
+            <Image *ngIf="p.good.tags[0]==2"  src="res://second04" width="30"></Image>
+            &lt;!&ndash;<Image *ngIf="p.good.tags[0]==3"  src="res://second03" width="30"></Image>&ndash;&gt;
+            &lt;!&ndash;<Image *ngIf="p.good.tags[0]==4"  src="res://second04" width="30"></Image>&ndash;&gt;
+            <Image *ngIf="p.good.tags[0]==8"  src="res://second06" width="30"></Image>
+            <Image *ngIf="p.good.tags[0]==9"  src="res://second05" width="30"></Image>
+            <Label text="{{p.good.goodName}}" class="product-textView"></Label>
+        </StackLayout>
+        &lt;!&ndash;价格&ndash;&gt;
+        <StackLayout class="margin-left" col="0" row="2" colSpan="3">
+            <my-prices [withSpecifications]="p.good.withSpecifications[0]"></my-prices>
+        </StackLayout>
+        &lt;!&ndash;库存数量&ndash;&gt;
+        <StackLayout *ngIf="p&&p.good.withSpecifications[0].advicePrice" col="0" row="3" orientation="horizontal">
+            <Label text="市场指导价:"></Label>
+            <Label text="{{p.advicePrice}}"></Label>
+        </StackLayout>
+        <StackLayout  col="2" row="3" orientation="horizontal">
+            <Label text="库存" class="stock"></Label>
+            <Label text="{{p.stocks[0].rest}}"  class="stock" marginLeft="3"></Label>
+        </StackLayout>
+    </GridLayout>
+</GridLayout>-->
